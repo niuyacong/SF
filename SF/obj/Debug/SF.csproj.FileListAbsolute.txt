@@ -1,0 +1,6 @@
+F:\my\SF\SF\bin\Debug\SF.exe.config
+F:\my\SF\SF\bin\Debug\SF.exe
+F:\my\SF\SF\bin\Debug\SF.pdb
+F:\my\SF\SF\obj\Debug\SF.exe
+F:\my\SF\SF\obj\Debug\SF.pdb
+F:\my\SF\SF\obj\Debug\SF.csprojResolveAssemblyReference.cache
