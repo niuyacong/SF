@@ -17,6 +17,8 @@ namespace SF
             string[] arr = { "A", "C", "B", "D" };
             //int型
             int[] num = { 14, 12, 6, 89 };
+            //shell 排序
+            num = compare<int>.ShellSort(num,4);
             //实体分数字段排序，输出姓名
             Student st1 = new Student("nyc1", 123);
             Student st2 = new Student("nyc4", 59);
@@ -27,7 +29,14 @@ namespace SF
             {
                 str += stu[i].name  + "  ";
             }
-            Console.Write(str);
+      
+            string result = "";
+            int[] test = compare<int>.GenraNum(100000);
+            int[]newtest= compare<int>.CopyNum(test,100000);
+            result = compare<int>.TestSort("Test", compare<int>.order, test, 100000);
+            result += compare<int>.TestSort("insertTest", compare<int>.InsertOrder, newtest, 100000);
+            test=null;
+            Console.Write(result);
             Console.Read();
         }
     }
