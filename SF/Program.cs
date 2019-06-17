@@ -19,8 +19,8 @@ namespace SF
             int[] num = { 14, 12, 6, 89 };
             //实体分数字段排序，输出姓名
             Student st1 = new Student("nyc1", 123);
-            Student st2 = new Student("nyc2", 59);
-            Student st3 = new Student("nyc3", 10);
+            Student st2 = new Student("nyc4", 59);
+            Student st3 = new Student("nyc5", 59);
             Student[] stu = { st3, st1, st2 };
             stu = compare<Student>.order(stu, 3);
             for (int i = 0; i < stu.Length; i++)

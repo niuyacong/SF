@@ -21,7 +21,7 @@ namespace SF.Model
            if (this.score > stu.score)
                return 1;
            else if (this.score == stu.score)
-               return 0;
+               return this.name.CompareTo(stu.name)>0?1:-1;
            else
                return -1;
        }
