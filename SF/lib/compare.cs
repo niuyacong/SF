@@ -39,7 +39,7 @@ namespace SF.lib
         //比较第三个数与第二个数，小的话，交换位置，继续和第一个比较。大于第二个数的情况，不用再进行比较，
         //因此这种排序优于依次向后比较的排序
        //10000个测试数据,用时0.254 100000个测试数据，用时25.42 也是n^2的关系
-        //shell sort希尔排序
+       //适用于有序数组，速度非常快
        public static T[] InsertOrder(T[] arr, int n)
        {
            for (int i = 1; i < n; i++)
@@ -52,8 +52,9 @@ namespace SF.lib
                for (j = i; j > 0&&arr[j].CompareTo(arr[j-1])<0; j--)
                {
                    arr[j] = arr[j - 1];
+                   arr[j-1] = left;
                }
-               arr[j] = left;
+              
            }
            return arr;
        }
@@ -99,8 +100,6 @@ namespace SF.lib
             int f =(int) Math.Floor(decimal.Parse( n.ToString())/ 2);
             while (f > 0)
             {
-                int num = (int)Math.Floor(decimal.Parse(n.ToString()) / f);
-                int ext = n % f > 0 ? num++ : num;//可以分为几组
                 for (int i = f; i < n; i+=f)
                 {
                     if (arr[i].CompareTo(arr[i - f]) < 0)
