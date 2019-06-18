@@ -9,7 +9,7 @@ namespace SF.lib
     //此类中均未O(nlogn)排序算法
   public  class compare1<T> where T : IComparable
     {
-      //归并排序
+      //归并排序(递归拆分，归并，在归并的顺序)
         //相同的数据量测试 100000插入排序用时22.35 归并排序用时0.027
       public static T[] MergeOrder(T[]arr ,int n)
       {
