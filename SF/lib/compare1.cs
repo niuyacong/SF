@@ -20,10 +20,10 @@ namespace SF.lib
       //递归拆分
       public static void __mergeorder(T[] arr, int l,int r)
       {
-          //if (l >= r)
-          //{
-          //    return;
-          //}
+          if (l >= r)
+          {
+              return;
+          }
           //优化：在数据小的情况，近乎有序的概率比较大，使用插入排序有优势
           //当n足够小的时候，O(n^2)要比O(nlogn)要快，so..
           if (r - l <= 15)//15??
@@ -70,7 +70,7 @@ namespace SF.lib
       }
       public static T[] InsertOrder(T[] arr, int l,int r)
       {
-          for (int i = l==0?1:l; i < r; i++)
+          for (int i = l==0?1:l; i <= r; i++)
           {
               //把在循环中的交换过程进行优化
               //把将要比较的数复制一份

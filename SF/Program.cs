@@ -38,15 +38,16 @@ namespace SF
             //    str += stu[i].name  + "  ";
             //}
 
-            //string result = "";
-            //int[] test = compare<int>.GenraNum(100000);
-            //int[] newtest = compare<int>.CopyNum(test, 100000);
+            string result = "";
+            int[] test = compare<int>.GenraNum(10000);
+            int[] newtest = compare<int>.CopyNum(test, 10000);
             //result = compare<int>.TestSort("Test", compare<int>.order, test, 100000);
             //result += compare<int>.TestSort("insertTest", compare<int>.InsertOrder, test, 100000);
-            //result += compare<int>.TestSort("shellTest", compare<int>.ShellSort, newtest, 100000);
-            //result += compare<int>.TestSort("mergeTest", compare1<int>.MergeOrder, newtest, 100000);
+            //result += compare<int>.TestSort("shellTest", compare<int>.ShellSort, test, 100000);
+            result += compare<int>.TestSort("mergeTest", compare1<int>.MergeOrder, test, 10000);
+            result += compare<int>.TestSort("quickSort", Quick<int>.quickSort, newtest, 10000);
             //test=null;
-            Console.Write(str);
+            Console.Write(result);
             Console.Read();
         }
     }

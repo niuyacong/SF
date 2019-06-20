@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="lib\compare.cs" />
     <Compile Include="lib\compare1.cs" />
+    <Compile Include="lib\Merge.cs" />
+    <Compile Include="lib\Quick.cs" />
     <Compile Include="Model\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

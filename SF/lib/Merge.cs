@@ -8,6 +8,10 @@ namespace SF.lib
 {
     public class Merge<T> where T : IComparable
     {
+        //O(nlogn)排序都可以进行两点优化
+        //1、左右两边都是有序的，那么可以先进行中间相邻两数的比较，如果左小于右，那么左右两边可以不再进行排序
+        //2、当进行排序的数组足够小的时候，越接近于有序数组，插入排序优于归并排序
+
         //实现归并排序，分组进行插入排序，合并成大组再进行插入排序，依次变大组进行排序
         public static T[] MergeSortBU(T[] arr,int n)
         {
